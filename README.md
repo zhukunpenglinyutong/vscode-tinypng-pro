@@ -1,2 +1,5 @@
-# vscode-tinypng-pro
-vscode 压缩图片的最佳实践方式（欢迎star）
+# TinyPNG-Pro
+
+有你想要的所有图片压缩姿势
+
+开发进度（25%）

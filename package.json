@@ -1,0 +1,58 @@
+{
+	"name": "vscode-tinypng-pro",
+	"displayName": "TinyPNG-Pro",
+	"description": "👍 vscode 压缩图片的最佳实践方式（欢迎star）",
+	"keywords": [
+		"tinypng",
+		"compress",
+		"img",
+		"image"
+	],
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.compression"
+	],
+	"main": "./src/index.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.compression",
+				"title": "👏 压缩图片"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.compression",
+					"group": "1_modification@1"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js",
+		"commit": "git add . && git-cz"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.52.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	},
+	"dependencies": {
+		"git-cz": "^4.7.6"
+	}
+}
